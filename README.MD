@@ -43,9 +43,9 @@
     flowchart LR
        CAM[Logitech C270] --> PI[Захват AV на Pi]
        PI[Захват AV на Pi] --> BACK[ASP.NET Core API / медиа]
-       BACK[ASP.NET Core API] -->|аутентификация (пароль → сессия/cookie)| FR[React SPA]
+       BACK[ASP.NET Core API] -->|аутентификация| FR[React SPA]
        BACK[ASP.NET Core API] -->|управление: ночной режим, запись, mute| FR[React SPA]
-       BACK[ASP.NET Core API] -->|раздача live-потока (видео + звук)| FR[React SPA]
+       BACK[ASP.NET Core API] -->|раздача live-потока| FR[React SPA]
        BACK[ASP.NET Core API] --> ST[Кольцевая запись → SD, последний 1 час]
 ```
 
