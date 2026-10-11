@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  mediamtx: 
+    image: bluenviron/mediamtx:1
+    ports: 
+    - 8554:8554 
+    - 1935:1935 
+    - 8888:8888 
+    - 8889:8889 
+    - 8892:8892 
+    - 8890:8890/udp 
+    - 8189:8189/udp 
+    - 8892:8892/udp 
+    - 8893:8893/udp 
+    environment:
+      MTX_RTSPTRANSPORTS=tcp
+    volumes:
+    depends_on:
+    restart:
+
+volumes:
+networks:
